@@ -1,5 +1,5 @@
 //
-//  CharityListViewController.swift
+//  DonationViewController.swift
 //  TamBoon
 //
 //  Created by hiroshi on 2020/09/16.
@@ -8,12 +8,15 @@
 
 import UIKit
 
-class CharityListViewController: UIViewController {
+class DonationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let donation = Donation(name: "test", token: "token", amount: 123)
+//        APIAccess.postDonation(donation: donation, completion: {(result) in
+//            print(result.errorCode)
+//        })
     }
     
 

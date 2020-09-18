@@ -20,6 +20,7 @@
 		68BD04CD2511F9070098CB40 /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD04CC2511F9070098CB40 /* Donation.swift */; };
 		68BD04D22512E7EC0098CB40 /* DonationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD04D12512E7EC0098CB40 /* DonationResult.swift */; };
 		68BD04D42512E8000098CB40 /* CharityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD04D32512E8000098CB40 /* CharityList.swift */; };
+		68BD04D825149BB80098CB40 /* CharityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD04D625149BB70098CB40 /* CharityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		68BD04CC2511F9070098CB40 /* Donation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		68BD04D12512E7EC0098CB40 /* DonationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationResult.swift; sourceTree = "<group>"; };
 		68BD04D32512E8000098CB40 /* CharityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityList.swift; sourceTree = "<group>"; };
+		68BD04D625149BB70098CB40 /* CharityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +74,10 @@
 			children = (
 				68BD04AB251046880098CB40 /* AppDelegate.swift */,
 				68BD04AD251046880098CB40 /* SceneDelegate.swift */,
-				68BD04C52511F4A80098CB40 /* Controller */,
+				68BD04C52511F4A80098CB40 /* ViewController */,
 				68BD04C22511F0670098CB40 /* Model */,
 				68BD04BF2511EF1F0098CB40 /* Network */,
+				68BD04D525149B6B0098CB40 /* View */,
 				68BD04B42510468C0098CB40 /* Assets.xcassets */,
 				68BD04B1251046880098CB40 /* Main.storyboard */,
 				68BD04B62510468C0098CB40 /* LaunchScreen.storyboard */,
@@ -100,14 +103,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		68BD04C52511F4A80098CB40 /* Controller */ = {
+		68BD04C52511F4A80098CB40 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				68BD04C62511F5160098CB40 /* CharityListViewController.swift */,
 				68BD04C82511F8AC0098CB40 /* DonationViewController.swift */,
 				68BD04CA2511F8C80098CB40 /* DonationResultViewController.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		68BD04CE2512E7B90098CB40 /* Charity */ = {
@@ -126,6 +129,14 @@
 				68BD04D12512E7EC0098CB40 /* DonationResult.swift */,
 			);
 			path = Donation;
+			sourceTree = "<group>";
+		};
+		68BD04D525149B6B0098CB40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68BD04D625149BB70098CB40 /* CharityTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				68BD04AC251046880098CB40 /* AppDelegate.swift in Sources */,
 				68BD04D42512E8000098CB40 /* CharityList.swift in Sources */,
 				68BD04C72511F5160098CB40 /* CharityListViewController.swift in Sources */,
+				68BD04D825149BB80098CB40 /* CharityTableViewCell.swift in Sources */,
 				68BD04D22512E7EC0098CB40 /* DonationResult.swift in Sources */,
 				68BD04C42511F0D80098CB40 /* Charity.swift in Sources */,
 				68BD04C12511F0440098CB40 /* APIAccess.swift in Sources */,
