@@ -6,6 +6,6 @@ target 'TamBoon' do
   use_frameworks!
 
   # Pods for TamBoon
-  
+  pod 'R.swift'
 
 end

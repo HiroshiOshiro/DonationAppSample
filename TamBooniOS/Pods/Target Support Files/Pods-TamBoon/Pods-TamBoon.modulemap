@@ -1,0 +1,6 @@
+framework module Pods_TamBoon {
+  umbrella header "Pods-TamBoon-umbrella.h"
+
+  export *
+  module * { export * }
+}
