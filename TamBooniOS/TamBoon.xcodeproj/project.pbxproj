@@ -42,7 +42,7 @@
 		68BD04D12512E7EC0098CB40 /* DonationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationResult.swift; sourceTree = "<group>"; };
 		68BD04D32512E8000098CB40 /* CharityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityList.swift; sourceTree = "<group>"; };
 		68BD04D625149BB70098CB40 /* CharityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityTableViewCell.swift; sourceTree = "<group>"; };
-		68BD04DB251599620098CB40 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		68BD04DB251599620098CB40 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = ../R.generated.swift; sourceTree = "<group>"; };
 		85198D7886BA0F0A205B2551 /* Pods_TamBoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TamBoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FA77DB02F8F67285A650A5 /* Pods-TamBoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamBoon.release.xcconfig"; path = "Target Support Files/Pods-TamBoon/Pods-TamBoon.release.xcconfig"; sourceTree = "<group>"; };
 		D42A7FD66EA32BD3CD6BD306 /* Pods-TamBoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamBoon.debug.xcconfig"; path = "Target Support Files/Pods-TamBoon/Pods-TamBoon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,7 +71,6 @@
 		68BD049F251046880098CB40 = {
 			isa = PBXGroup;
 			children = (
-				68BD04DB251599620098CB40 /* R.generated.swift */,
 				68BD04AA251046880098CB40 /* TamBoon */,
 				68BD04A9251046880098CB40 /* Products */,
 				B6D20B19E03F6A1240DEA0E0 /* Pods */,
@@ -97,6 +96,7 @@
 				68BD04BF2511EF1F0098CB40 /* Network */,
 				68BD04D525149B6B0098CB40 /* View */,
 				68BD04B42510468C0098CB40 /* Assets.xcassets */,
+				68BD04DB251599620098CB40 /* R.generated.swift */,
 				68BD04B1251046880098CB40 /* Main.storyboard */,
 				68BD04B62510468C0098CB40 /* LaunchScreen.storyboard */,
 				68BD04B92510468C0098CB40 /* Info.plist */,
@@ -173,11 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68BD04BC2510468C0098CB40 /* Build configuration list for PBXNativeTarget "TamBoon" */;
 			buildPhases = (
+				68BD04DA251598890098CB40 /* Rswift Script */,
 				FA0ADD1AD5847DFDD4F11B5E /* [CP] Check Pods Manifest.lock */,
 				68BD04A4251046880098CB40 /* Sources */,
 				68BD04A5251046880098CB40 /* Frameworks */,
 				68BD04A6251046880098CB40 /* Resources */,
-				68BD04DA251598890098CB40 /* Rswift Script */,
 				5EDD69E4764F5A7E6CF08222 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
