@@ -14,6 +14,7 @@ class DonationViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var charityNameLabel: UILabel!
     @IBOutlet weak var charityLogoImageView: UIImageView!
+    @IBOutlet weak var logoLoadingIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -31,6 +32,22 @@ class DonationViewController: UIViewController {
         // to enable scroll adjustment with keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
+        setupUI()
+    }
+    
+    func setupUI() {
+        charityNameLabel.text = charity?.name
+        logoLoadingIndicator.startAnimating()
+        if let logoURL = URL(string: charity?.logoUrl ?? "") {
+            charityLogoImageView
+                .loadImageAsynchronously(url: logoURL,
+                                         completion: {(result) in
+                                            if result {
+                                                self.logoLoadingIndicator.stopAnimating()
+                                            }
+                })
+        }
         
         validateInputForm()
     }

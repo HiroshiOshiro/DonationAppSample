@@ -79,7 +79,7 @@
                                                             <constraint firstAttribute="height" constant="240" id="vvJ-7X-u6g"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BME-JF-lve">
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BME-JF-lve">
                                                         <rect key="frame" x="101.5" y="101.5" width="37" height="37"/>
                                                     </activityIndicatorView>
                                                 </subviews>
@@ -278,6 +278,7 @@
                         <outlet property="charityNameLabel" destination="dNS-ef-4h6" id="aei-2t-uDG"/>
                         <outlet property="expMonthTextField" destination="6Yd-Xc-urB" id="qfp-dr-bUl"/>
                         <outlet property="expYearTextField" destination="BrF-Fg-5oz" id="1I7-5f-6Lo"/>
+                        <outlet property="logoLoadingIndicator" destination="BME-JF-lve" id="nQF-8R-9gJ"/>
                         <outlet property="nameTextField" destination="aPY-G3-bYJ" id="qP4-pn-eca"/>
                         <outlet property="scrollView" destination="xRZ-nn-6Lk" id="BkT-n5-oUE"/>
                         <outlet property="securityCodeTextField" destination="VKr-4l-VvU" id="Elm-WR-ROo"/>
