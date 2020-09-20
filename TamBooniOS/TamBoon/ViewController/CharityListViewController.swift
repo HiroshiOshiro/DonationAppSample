@@ -52,4 +52,13 @@ extension CharityListViewController: UITableViewDelegate, UITableViewDataSource 
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let charity = charityList?.data[indexPath.row],
+            let donationVC = R.storyboard.main.donationViewController() {
+            donationVC.charity = charity
+            self.navigationController?.pushViewController(donationVC, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
