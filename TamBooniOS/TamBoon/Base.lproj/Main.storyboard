@@ -144,7 +144,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cardholder's Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-G3-bYJ">
                                                                 <rect key="frame" x="0.0" y="135" width="354" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <action selector="textEditingEnded:" destination="4f9-Vc-Uw7" eventType="editingChanged" id="fAK-Ux-HGb"/>
                                                                 </connections>
