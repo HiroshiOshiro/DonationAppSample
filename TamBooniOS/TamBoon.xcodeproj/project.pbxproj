@@ -184,8 +184,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68BD04BC2510468C0098CB40 /* Build configuration list for PBXNativeTarget "TamBoon" */;
 			buildPhases = (
-				68BD04DA251598890098CB40 /* Rswift Script */,
 				FA0ADD1AD5847DFDD4F11B5E /* [CP] Check Pods Manifest.lock */,
+				68BD04DA251598890098CB40 /* Rswift Script */,
 				68BD04A4251046880098CB40 /* Sources */,
 				68BD04A5251046880098CB40 /* Frameworks */,
 				68BD04A6251046880098CB40 /* Resources */,
@@ -278,7 +278,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

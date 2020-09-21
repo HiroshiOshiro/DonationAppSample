@@ -1,20 +1,26 @@
 PODS:
+  - NVActivityIndicatorView/Base (5.0.1)
+  - NVActivityIndicatorView/Extended (5.0.1):
+    - NVActivityIndicatorView/Base
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
 
 DEPENDENCIES:
+  - NVActivityIndicatorView/Extended
   - R.swift
 
 SPEC REPOS:
   trunk:
+    - NVActivityIndicatorView
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
+  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
 
-PODFILE CHECKSUM: a4d6b7af3b97f4598d7d068b1ec1e00f226803c2
+PODFILE CHECKSUM: 49fce1e0a0cee40391e3229d427ff59621a54471
 
 COCOAPODS: 1.9.1

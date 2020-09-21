@@ -7,5 +7,6 @@ target 'TamBoon' do
 
   # Pods for TamBoon
   pod 'R.swift'
-
+  pod 'NVActivityIndicatorView/Extended'
+  
 end
