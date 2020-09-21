@@ -14,7 +14,7 @@ class APIAccess {
     static private let pathForCharity = "charities"
     static private let pathForDonation = "donations"
     
-    static func getCharities(completion: @escaping (CharityList) -> Void) {
+    static func getCharities(completion: @escaping (CharityList?) -> Void) {
         guard let url = URL(string: baseURL + pathForCharity) else {
             return
         }
@@ -38,12 +38,13 @@ class APIAccess {
                 }
             } else {
                 print(error?.localizedDescription ?? "Error")
+                completion(nil)
             }
         }
         task.resume()
     }
     
-    static func postDonation(donation: Donation, completion: @escaping (DonationResult) -> Void) {
+    static func postDonation(donation: Donation, completion: @escaping (DonationResult?) -> Void) {
         guard let url = URL(string: baseURL + pathForDonation),
             let data = try? JSONEncoder().encode(donation) else {
             return
@@ -71,6 +72,7 @@ class APIAccess {
                 }
             } else {
                 print(error?.localizedDescription ?? "Error")
+                completion(nil)
             }
         }
         task.resume()

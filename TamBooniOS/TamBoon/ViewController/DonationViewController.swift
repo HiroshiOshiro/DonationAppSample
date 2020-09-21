@@ -107,17 +107,35 @@ class DonationViewController: UIViewController, NVActivityIndicatorViewable {
                                 token: token,
                                 amount: amount)
         
-        APIAccess.postDonation(donation: donation, completion: {(result) in
-            print(result.errorCode)
-            // TODO toransition to result screen
+        APIAccess.postDonation(donation: donation, completion: {(donationResult) in
             // resume user interaction
             self.stopAnimating()
-            
-            if let resultVC = R.storyboard.main.donationResultViewController() {
-                resultVC.charity = self.charity
-                resultVC.amount = amount
+            guard let result = donationResult else {
                 DispatchQueue.main.async {
-                    self.navigationController?.pushViewController(resultVC, animated: true)
+                    Utility.showAlertWithDismiss(viewController: self,
+                                                 title: R.string.localizable.generalErrorTitle(),
+                                                 message: R.string.localizable.apiAccessError(),
+                                                 completion: nil)
+                }
+                return
+            }
+            
+            if result.errorCode.isEmpty {
+                
+                if let resultVC = R.storyboard.main.donationResultViewController() {
+                    resultVC.charity = self.charity
+                    resultVC.amount = amount
+                    DispatchQueue.main.async {
+                        self.navigationController?.pushViewController(resultVC, animated: true)
+                    }
+                }
+            } else {
+                print(result.errorCode)
+                DispatchQueue.main.async {
+                    Utility.showAlertWithDismiss(viewController: self,
+                                                 title: R.string.localizable.generalErrorTitle(),
+                                                 message: R.string.localizable.generalErrorMessage(result.errorMessage),
+                                                 completion: nil)
                 }
             }
         })

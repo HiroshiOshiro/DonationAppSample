@@ -9,7 +9,7 @@
 import UIKit
 
 class CharityListViewController: UIViewController {
-
+    
     @IBOutlet weak var charityTableView: UITableView!
     
     var charityList: CharityList? {
@@ -22,10 +22,20 @@ class CharityListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupCharityTable()
         
         APIAccess.getCharities(completion: { (charityList) in
+            guard let charityList = charityList else {
+                DispatchQueue.main.async {
+                    Utility.showAlertWithDismiss(viewController: self,
+                                                 title: R.string.localizable.generalErrorTitle(),
+                                                 message: R.string.localizable.apiAccessError(),
+                                                 completion: nil)
+                }
+                return
+            }
+            
             self.charityList = charityList
         })
     }
@@ -42,7 +52,7 @@ extension CharityListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CharityTableViewCell", for: indexPath) as? CharityTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.charityTableViewCell, for: indexPath) else {
             fatalError("Cell identifer is not correct!")
         }
         

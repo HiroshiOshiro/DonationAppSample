@@ -7,5 +7,9 @@
 */
 
 
+"GeneralErrorTitle" = "Error";
+"GeneralErrorMessage" = "Something un expected happened. please check the message below: \n%@";
+"APIAccessError" = "Failed to get information from server. Sorry for inconvinience. Please try again later.";
+
 "DonationResultText" = "Thank you for your donation to %@. \nHave a nice day😊";
 "DonationResultAmount" = "Amount: %@THB";
