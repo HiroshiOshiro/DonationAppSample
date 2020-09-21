@@ -23,6 +23,7 @@
 		68BD04D825149BB80098CB40 /* CharityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD04D625149BB70098CB40 /* CharityTableViewCell.swift */; };
 		68BD04DC251599620098CB40 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD04DB251599620098CB40 /* R.generated.swift */; };
 		68D21A0C251613180096857C /* UIImageView+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D21A0B251613180096857C /* UIImageView+AsyncLoad.swift */; };
+		68D21A0F25182EF30096857C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68D21A1125182EF30096857C /* Localizable.strings */; };
 		88D899C9FE5E4A76EA36B0C9 /* Pods_TamBoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85198D7886BA0F0A205B2551 /* Pods_TamBoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		68BD04D625149BB70098CB40 /* CharityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityTableViewCell.swift; sourceTree = "<group>"; };
 		68BD04DB251599620098CB40 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = ../R.generated.swift; sourceTree = "<group>"; };
 		68D21A0B251613180096857C /* UIImageView+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncLoad.swift"; sourceTree = "<group>"; };
+		68D21A1025182EF30096857C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		85198D7886BA0F0A205B2551 /* Pods_TamBoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TamBoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FA77DB02F8F67285A650A5 /* Pods-TamBoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamBoon.release.xcconfig"; path = "Target Support Files/Pods-TamBoon/Pods-TamBoon.release.xcconfig"; sourceTree = "<group>"; };
 		D42A7FD66EA32BD3CD6BD306 /* Pods-TamBoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamBoon.debug.xcconfig"; path = "Target Support Files/Pods-TamBoon/Pods-TamBoon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,18 +93,19 @@
 		68BD04AA251046880098CB40 /* TamBoon */ = {
 			isa = PBXGroup;
 			children = (
-				68D21A0A2516125C0096857C /* Extention */,
 				68BD04AB251046880098CB40 /* AppDelegate.swift */,
 				68BD04AD251046880098CB40 /* SceneDelegate.swift */,
 				68BD04C52511F4A80098CB40 /* ViewController */,
 				68BD04C22511F0670098CB40 /* Model */,
 				68BD04BF2511EF1F0098CB40 /* Network */,
 				68BD04D525149B6B0098CB40 /* View */,
+				68D21A0A2516125C0096857C /* Extention */,
 				68BD04B42510468C0098CB40 /* Assets.xcassets */,
 				68BD04DB251599620098CB40 /* R.generated.swift */,
 				68BD04B1251046880098CB40 /* Main.storyboard */,
 				68BD04B62510468C0098CB40 /* LaunchScreen.storyboard */,
 				68BD04B92510468C0098CB40 /* Info.plist */,
+				68D21A1125182EF30096857C /* Localizable.strings */,
 			);
 			path = TamBoon;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68BD04B82510468C0098CB40 /* LaunchScreen.storyboard in Resources */,
+				68D21A0F25182EF30096857C /* Localizable.strings in Resources */,
 				68BD04B52510468C0098CB40 /* Assets.xcassets in Resources */,
 				68BD04B3251046880098CB40 /* Main.storyboard in Resources */,
 			);
@@ -278,7 +282,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -346,6 +350,14 @@
 				68BD04B72510468C0098CB40 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		68D21A1125182EF30096857C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68D21A1025182EF30096857C /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
