@@ -254,7 +254,6 @@
                                     <constraint firstItem="mLe-4U-V3j" firstAttribute="top" secondItem="HJM-WG-cVu" secondAttribute="top" id="CaL-t4-O4T"/>
                                     <constraint firstItem="mLe-4U-V3j" firstAttribute="width" secondItem="ee2-9g-Rtk" secondAttribute="width" id="beB-dp-8l7"/>
                                     <constraint firstItem="mLe-4U-V3j" firstAttribute="leading" secondItem="HJM-WG-cVu" secondAttribute="leading" id="cM6-Xi-cn5"/>
-                                    <constraint firstItem="mLe-4U-V3j" firstAttribute="leading" secondItem="HJM-WG-cVu" secondAttribute="leading" id="q1D-f6-von"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="HJM-WG-cVu"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ee2-9g-Rtk"/>
@@ -288,6 +287,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6m-6U-gCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1126" y="0.0"/>
+        </scene>
+        <!--Donation Result View Controller-->
+        <scene sceneID="C90-Di-uCc">
+            <objects>
+                <viewController storyboardIdentifier="DonationResultViewController" id="vYf-Cd-SD2" customClass="DonationResultViewController" customModule="TamBoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZB-1u-0dv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKy-ZS-wrG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAB-wt-qB6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="304"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCN-rE-MlR">
+                                                <rect key="frame" x="129.5" y="50" width="155" height="36"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DonationResultText" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng7-AA-Iq4">
+                                                <rect key="frame" x="20" y="116" width="374" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DonationResultAmount" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hc-Q4-pVP">
+                                                <rect key="frame" x="20" y="160" width="374" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-P9-WaV">
+                                                <rect key="frame" x="190" y="224" width="34" height="30"/>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <action selector="backButtonTapped:" destination="vYf-Cd-SD2" eventType="touchUpInside" id="M0P-Mk-OF6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ng7-AA-Iq4" firstAttribute="top" secondItem="iCN-rE-MlR" secondAttribute="bottom" constant="30" id="8bF-7j-qEg"/>
+                                            <constraint firstItem="eNl-P9-WaV" firstAttribute="top" secondItem="6hc-Q4-pVP" secondAttribute="bottom" constant="40" id="9uy-09-Ok6"/>
+                                            <constraint firstItem="6hc-Q4-pVP" firstAttribute="leading" secondItem="dAB-wt-qB6" secondAttribute="leading" constant="20" id="Aem-Zh-3n4"/>
+                                            <constraint firstItem="eNl-P9-WaV" firstAttribute="centerX" secondItem="dAB-wt-qB6" secondAttribute="centerX" id="O2N-KB-ylc"/>
+                                            <constraint firstItem="ng7-AA-Iq4" firstAttribute="leading" secondItem="dAB-wt-qB6" secondAttribute="leading" constant="20" id="UQl-Sp-TZW"/>
+                                            <constraint firstAttribute="trailing" secondItem="ng7-AA-Iq4" secondAttribute="trailing" constant="20" id="VXQ-vi-uhj"/>
+                                            <constraint firstItem="iCN-rE-MlR" firstAttribute="centerX" secondItem="dAB-wt-qB6" secondAttribute="centerX" id="gWZ-d0-fez"/>
+                                            <constraint firstItem="6hc-Q4-pVP" firstAttribute="top" secondItem="ng7-AA-Iq4" secondAttribute="bottom" constant="20" id="hZr-Cm-nkJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="eNl-P9-WaV" secondAttribute="bottom" constant="50" id="jO5-32-R7X"/>
+                                            <constraint firstAttribute="trailing" secondItem="6hc-Q4-pVP" secondAttribute="trailing" constant="20" id="sq6-54-XcX"/>
+                                            <constraint firstItem="iCN-rE-MlR" firstAttribute="top" secondItem="dAB-wt-qB6" secondAttribute="top" constant="50" id="v2h-v6-8gl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dAB-wt-qB6" firstAttribute="bottom" secondItem="z1X-8m-vQy" secondAttribute="bottom" id="5Mx-0h-pvM"/>
+                                    <constraint firstItem="dAB-wt-qB6" firstAttribute="top" secondItem="z1X-8m-vQy" secondAttribute="top" id="WPi-Eb-aou"/>
+                                    <constraint firstItem="dAB-wt-qB6" firstAttribute="trailing" secondItem="z1X-8m-vQy" secondAttribute="trailing" id="p9X-Ze-ugF"/>
+                                    <constraint firstItem="dAB-wt-qB6" firstAttribute="width" secondItem="dpI-Yi-Eqh" secondAttribute="width" id="paJ-bx-fUV"/>
+                                    <constraint firstItem="dAB-wt-qB6" firstAttribute="leading" secondItem="z1X-8m-vQy" secondAttribute="leading" id="rjO-mF-hPd"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="z1X-8m-vQy"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="dpI-Yi-Eqh"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kKy-ZS-wrG" firstAttribute="bottom" secondItem="GPl-rb-7c8" secondAttribute="bottom" id="2o0-ez-Duy"/>
+                            <constraint firstItem="kKy-ZS-wrG" firstAttribute="trailing" secondItem="GPl-rb-7c8" secondAttribute="trailing" id="AJV-QA-qgh"/>
+                            <constraint firstItem="kKy-ZS-wrG" firstAttribute="leading" secondItem="GPl-rb-7c8" secondAttribute="leading" id="geB-80-FWm"/>
+                            <constraint firstItem="kKy-ZS-wrG" firstAttribute="top" secondItem="GPl-rb-7c8" secondAttribute="top" id="qAj-Ql-3zc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GPl-rb-7c8"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="6hc-Q4-pVP" id="SfV-zQ-Kqt"/>
+                        <outlet property="messageLabel" destination="ng7-AA-Iq4" id="jOa-ab-gcc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxo-ya-uve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2121.739130434783" y="-34.151785714285715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wia-1r-Sok">

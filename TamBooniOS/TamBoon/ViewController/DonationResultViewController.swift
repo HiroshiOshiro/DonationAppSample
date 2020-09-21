@@ -10,21 +10,31 @@ import UIKit
 
 class DonationResultViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    
+    var charity: Charity?
+    var amount: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        // hide navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        messageLabel.text = R.string.localizable.donationResultText(charity?.name ?? "")
+        
+        // format amount with comma
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        amountLabel.text = R.string.localizable.donationResultAmount(numberFormatter.string(from: NSNumber(value:amount)) ?? "")
     }
-    */
-
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }

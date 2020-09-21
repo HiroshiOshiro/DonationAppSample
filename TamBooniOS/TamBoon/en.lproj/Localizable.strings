@@ -7,3 +7,5 @@
 */
 
 
+"DonationResultText" = "Thank you for your donation to %@. \nHave a nice day😊";
+"DonationResultAmount" = "Amount: %@THB";

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class DonationViewController: UIViewController {
+class DonationViewController: UIViewController, NVActivityIndicatorViewable {
 
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -94,8 +95,12 @@ class DonationViewController: UIViewController {
             , let name = nameTextField.text
             else { return }
         
+        // block user interaction
+        startAnimating()
+        
         // Need payment process but ommit
         let token = Date().description
+        
         
         let donation = Donation(charityId: charity.id,
                                 name:  name,
@@ -105,6 +110,16 @@ class DonationViewController: UIViewController {
         APIAccess.postDonation(donation: donation, completion: {(result) in
             print(result.errorCode)
             // TODO toransition to result screen
+            // resume user interaction
+            self.stopAnimating()
+            
+            if let resultVC = R.storyboard.main.donationResultViewController() {
+                resultVC.charity = self.charity
+                resultVC.amount = amount
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(resultVC, animated: true)
+                }
+            }
         })
     }
     
